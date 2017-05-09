@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SharedPreferences</string>
     <string name="but1">Save data</string>
+    <string name="but2">Restore data</string>
 </resources>

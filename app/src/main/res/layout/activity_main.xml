@@ -12,4 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/but1" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/restore_data"
+        android:text="@string/but2"
+        />
 </LinearLayout>

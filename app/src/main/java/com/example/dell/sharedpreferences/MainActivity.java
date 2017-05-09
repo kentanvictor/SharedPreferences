@@ -21,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
                 editor.putInt("age",28);
                 editor.putBoolean("married",false);
                 editor.apply();
+                /*
+                * 点击事件通过getSharedPreferences()方法指定SharedPrefences的文件名为data。
+                * 并得到SharedPreferences.Editor对象。
+                * editor.putString、editor.putInt和editor.putBoolean添加了三个数据存储的工作
+                * 最后使用editor.apply()的方法提交，完成数据存储的操作
+                * */
             }
         });
     }

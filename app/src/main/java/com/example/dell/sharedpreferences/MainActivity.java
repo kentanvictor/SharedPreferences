@@ -35,12 +35,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences pref = getSharedPreferences("data",MODE_PRIVATE);
+                //通过getSharedPreferences()方法得到SharedPreferences的对象
                 String name = pref.getString("name","");
                 int age = pref.getInt("age",0);
                 boolean married = pref.getBoolean("married",false);
+                //分别调用getString、getInt和getBoolean方法获取前面储存的数据，如果没有找到数据，就用后面的默认值代替
                 Log.d("MainActivity","name is" +name);
                 Log.d("MainActivity","age is" +age);
                 Log.d("MainActivity","married is" +married);
+                //最后通过Log.d()打印出来
             }
         });
     }

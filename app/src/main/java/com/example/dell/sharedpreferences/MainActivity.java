@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
         saveData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences.Editor editor = getSharedPreferences("data",MODE_PRIVATE).edit();
-                editor.putString("name","Tom");
-                editor.putInt("age",28);
-                editor.putBoolean("married",false);
+                SharedPreferences.Editor editor = getSharedPreferences("data", MODE_PRIVATE).edit();
+                editor.putString("name", "Tom");
+                editor.putInt("age", 28);
+                editor.putBoolean("married", false);
                 editor.apply();
                 /*
                 * 点击事件通过getSharedPreferences()方法指定SharedPrefences的文件名为data。
@@ -34,15 +34,15 @@ public class MainActivity extends AppCompatActivity {
         restoreData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences pref = getSharedPreferences("data",MODE_PRIVATE);
+                SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
                 //通过getSharedPreferences()方法得到SharedPreferences的对象
-                String name = pref.getString("name","");
-                int age = pref.getInt("age",0);
-                boolean married = pref.getBoolean("married",false);
+                String name = pref.getString("name", "");
+                int age = pref.getInt("age", 0);
+                boolean married = pref.getBoolean("married", false);
                 //分别调用getString、getInt和getBoolean方法获取前面储存的数据，如果没有找到数据，就用后面的默认值代替
-                Log.d("MainActivity","name is" +name);
-                Log.d("MainActivity","age is" +age);
-                Log.d("MainActivity","married is" +married);
+                Log.d("MainActivity", "name is" + name);
+                Log.d("MainActivity", "age is" + age);
+                Log.d("MainActivity", "married is" + married);
                 //最后通过Log.d()打印出来
             }
         });
